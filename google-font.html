@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>JavaScript, the Canvas, and Google Fonts</title>
+
+    <style>
+
+    #canvas {
+        width: 600px;
+        height: 600px;
+        background-color: #000;
+        border: 3px solid red;
+    }
+
+    </style>
+    
+</head>
+<body>
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+
+    // Create a reference to the canvas
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    let googleFont = new FontFace(
+        "Lato",
+        "url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2)"
+    );
+
+    // https://fonts.googleapis.com/css2?family=Lato&display=swap
+    // http://fonts.gstatic.com/s/dosis/v4/xIAtSaglM8LZOYdGmG1JqQ.woff
+
+    googleFont.load().then((font) => {
+
+        document.fonts.add(font);
+
+        context.fillStyle = "#fff";
+        context.font = "60px Lato";
+        context.fillText("Hello World!", 50, 100);
+
+    });
+
+    </script>
+
+</body>
+</html>
