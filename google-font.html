@@ -26,14 +26,13 @@
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
 
+    // Load the Google Font
     let googleFont = new FontFace(
         "Lato",
-        "url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2)"
+        "url(https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjx4wXiWtFCc.woff2)"
     );
 
-    // https://fonts.googleapis.com/css2?family=Lato&display=swap
-    // http://fonts.gstatic.com/s/dosis/v4/xIAtSaglM8LZOYdGmG1JqQ.woff
-
+    // When the Google Font has loaded, add text to the canvas
     googleFont.load().then((font) => {
 
         document.fonts.add(font);
